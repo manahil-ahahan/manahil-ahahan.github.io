@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>مناحل احاحان</title>
+<meta name="description" content="منتوجات مناحل احاحان: العسل بجميع أنواعه، حبوب اللقح، الغذاء الملكي، العكبر وشمع النحل. اطلب مباشرة عبر واتساب.">
+<meta property="og:title" content="منتوجات مناحل احاحان">
+<meta property="og:description" content="العسل بجميع أنواعه وكل مشتقات الخلية.">
+<meta property="og:image" content="assets/logo-original.jpg">
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@500;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <nav class="nav" aria-label="القائمة الرئيسية">
+    <a class="brand" href="#top"><img src="assets/logo.svg" alt="" width="42" height="42">مناحل احاحان</a>
+    <div class="links">
+      <a href="#products">المنتوجات</a>
+      <a href="#services">الخدمات</a>
+      <a href="#gallery">الصور</a>
+      <a href="#reels">الريلز</a>
+      <a href="#contact">تواصل معنا</a>
+    </div>
+    <a class="btn wa sm walink" href="#contact" target="_blank" rel="noopener">واتساب</a>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div class="text">
+        <h1><small>منتوجات</small>مناحل احاحان</h1>
+        <p>العسل بجميع أنواعه، وكل ما تجود به الخلية: حبوب اللقح، الغذاء الملكي، العكبر والشمع.</p>
+        <div class="cta">
+          <a class="btn wa walink" href="#contact" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Z"/></svg>
+            اطلب عبر واتساب</a>
+          <a class="btn ghost" href="#products">تصفّح المنتوجات</a>
+        </div>
+      </div>
+      <div class="comb" id="comb"></div>
+    </div>
+  </section>
+  <svg class="drip" viewBox="0 0 1200 46" preserveAspectRatio="none" aria-hidden="true"><path fill="currentColor" d="M0 0h1200v8c-40 0-48 30-70 30s-20-30-60-30H860c-30 0-32 22-48 22s-18-22-50-22H520c-36 0-40 34-62 34s-24-34-60-34H210c-30 0-34 18-50 18s-18-18-48-18H0Z"/></svg>
+
+  <section class="band" id="products">
+    <div class="wrap">
+      <div class="head">
+        <div>
+          <h2>منتوجاتنا</h2>
+          <p class="lead">اختر النوع الذي يناسب ذوقك، واطلبه مباشرة برسالة واتساب.</p>
+        </div>
+        <div class="chips" role="group" aria-label="تصفية المنتوجات">
+          <button class="chip" data-k="all" aria-pressed="true">الكل</button>
+          <button class="chip" data-k="honey" aria-pressed="false">العسل</button>
+          <button class="chip" data-k="hive" aria-pressed="false">مشتقات الخلية</button>
+        </div>
+      </div>
+      <div id="grid"></div>
+    </div>
+  </section>
+
+  <section class="band svc" id="services">
+    <div class="wrap">
+      <h2>خدماتنا</h2>
+      <p class="lead">من المنحل إلى بيتك أو محلك.</p>
+      <div class="svcs" id="svcs"></div>
+    </div>
+  </section>
+
+  <section class="band" id="gallery">
+    <div class="wrap">
+      <h2>من المنحل</h2>
+      <p class="lead">صور من خلايانا ومنتوجاتنا.</p>
+      <div class="gal" id="gal"></div>
+    </div>
+  </section>
+
+  <section class="band svc" id="reels">
+    <div class="wrap">
+      <h2>الريلز</h2>
+      <p class="lead">لقطات قصيرة من عملنا اليومي مع النحل.</p>
+      <div class="reels" id="reels-list"></div>
+    </div>
+  </section>
+
+  <section class="band contact" id="contact">
+    <div class="wrap">
+      <h2>تواصل معنا</h2>
+      <p class="lead">املأ الطلب وسنجهّز لك رسالة واتساب جاهزة للإرسال.</p>
+      <div class="cgrid">
+        <div class="info">
+          <div><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Z"/></svg>
+            <span>واتساب: <span class="num wanum"></span></span></div>
+          <div id="cityrow" hidden><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></svg>
+            <span id="city"></span></div>
+          <p class="note" id="sample">رقم الهاتف المعروض تجريبي إلى حين إضافة الرقم الحقيقي.</p>
+          <a class="btn wa walink" href="#" target="_blank" rel="noopener" style="justify-self:start">راسلنا مباشرة</a>
+        </div>
+        <form id="order" novalidate>
+          <div class="row">
+            <label for="name">الاسم<input id="name" name="name" required autocomplete="name"></label>
+            <label for="ocity">المدينة<input id="ocity" name="city" autocomplete="address-level2"></label>
+          </div>
+          <div class="row">
+            <label for="product">المنتوج<select id="product" name="product"></select></label>
+            <label for="qty">الكمية<input id="qty" name="qty" placeholder="مثال: 2 كلغ"></label>
+          </div>
+          <label for="msg">ملاحظة<textarea id="msg" name="msg"></textarea></label>
+          <button class="btn wa" type="submit" style="justify-self:start">جهّز رسالة الطلب</button>
+          <div class="out" id="out" aria-live="polite">
+            <pre id="msgtext"></pre>
+            <div class="acts">
+              <a class="btn wa sm" id="send" href="#" target="_blank" rel="noopener">أرسل عبر واتساب</a>
+              <button class="btn ghost sm" type="button" id="copy">انسخ الرسالة</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="brand" href="#top"><img src="assets/logo.svg" alt="" width="34" height="34">مناحل احاحان</a>
+    <div class="social" id="footsoc"></div>
+    <span>© <span id="year"></span> منتوجات مناحل احاحان</span>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
