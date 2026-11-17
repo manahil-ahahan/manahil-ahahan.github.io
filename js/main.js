@@ -66,35 +66,20 @@
 
   const waLink = (msg) => `https://wa.me/${S.whatsapp}?text=${encodeURIComponent(msg)}`;
 
-  /* ---------- hero honeycomb wall ---------- */
-  {
-    const r = 46, w = Math.sqrt(3) * r, cells = [];
-    let s = 11;
-    const rnd = () => ((s = (s * 16807) % 2147483647) % 10000) / 10000;
-    for (let row = -1; row < 9; row++) for (let col = -1; col < 10; col++) {
-      const x = col * w + (row % 2 ? w / 2 : 0), y = row * r * 1.5;
-      const k = rnd(), fill = y > 280 ? (k < 0.75 ? "url(#hfill)" : "url(#cap)") : y > 140 ? (k < 0.45 ? "url(#hfill)" : k < 0.7 ? "url(#cap)" : "#E8A010") : (k < 0.2 ? "url(#hfill)" : "#E8A010");
-      cells.push(`<path d="M${x} ${y - r}l${w / 2} ${r / 2}v${r}L${x} ${y + r}l${-w / 2} ${-r / 2}v${-r}Z" fill="${fill}" stroke="#C47F04" stroke-width="7"/>`);
-      if (fill === "url(#hfill)" && rnd() < 0.18 && y > 160) cells.push(`<path d="M${x - 6} ${y + r}q6 ${22 + rnd() * 30} 12 0Z" fill="#E08A00"/>`);
-    }
-    const motion = matchMedia("(prefers-reduced-motion: reduce)").matches ? "" :
-      '<animateMotion dur="11s" repeatCount="indefinite" rotate="auto" keyPoints="0;1;0" keyTimes="0;.5;1" calcMode="spline" keySplines=".45 0 .55 1;.45 0 .55 1" path="M80 120 C 200 20, 300 220, 420 110 S 600 30, 640 160"/>';
-    $("#comb").innerHTML = `<svg viewBox="0 0 700 500" preserveAspectRatio="xMidYMax slice" role="img" aria-label="أقراص عسل وجرة عسل ونحلة">
-      <defs>
-        <linearGradient id="hfill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFC93A"/><stop offset="1" stop-color="#D98100"/></linearGradient>
-        <radialGradient id="cap" cx=".4" cy=".35"><stop offset="0" stop-color="#FFF1B8"/><stop offset="1" stop-color="#F3CF6A"/></radialGradient>
-      </defs>
-      <g opacity=".95">${cells.join("")}</g>
-      <ellipse cx="520" cy="492" rx="150" ry="16" fill="#3B2412" opacity=".25"/>
-      <g transform="translate(400 210) scale(2.1)">${icons.jar(0.55).replace(/<svg[^>]*>|<\/svg>/g, "")}</g>
-      <g class="bee" ${motion ? "" : 'transform="translate(560 120)"'}>${motion}<g transform="translate(-30 -30) scale(.5)">
-        <ellipse cx="45" cy="38" rx="26" ry="14" transform="rotate(-25 45 38)" fill="#fff" fill-opacity=".9" stroke="#3B2412" stroke-width="4"/>
-        <ellipse cx="80" cy="38" rx="26" ry="14" transform="rotate(25 80 38)" fill="#fff" fill-opacity=".9" stroke="#3B2412" stroke-width="4"/>
-        <ellipse cx="62" cy="70" rx="34" ry="22" fill="#F7C548" stroke="#3B2412" stroke-width="4"/>
-        <path d="M50 50v40M66 49v42M82 54v32" stroke="#3B2412" stroke-width="8"/>
-        <circle cx="100" cy="66" r="13" fill="#3B2412"/><path d="M104 54l8-14M98 54l2-15" stroke="#3B2412" stroke-width="4" stroke-linecap="round"/></g></g>
-    </svg>`;
-  }
+  /* ---------- photos ---------- */
+  const IMG = "images/gallery/";
+  const photo = (n, alt, sizes, eager) => `<img src="${IMG}${n}-sm.jpg" srcset="${IMG}${n}-sm.jpg 720w, ${IMG}${n}.jpg 1600w" sizes="${sizes}" alt="${alt}" ${eager ? 'fetchpriority="high"' : 'loading="lazy"'} decoding="async">`;
+  const altOf = (n) => (G.find((g) => g.name === n) || {}).alt || "";
+  if (window.HERO_PHOTO) $("#herophoto").innerHTML = photo(HERO_PHOTO.name, HERO_PHOTO.alt, "(max-width:760px) 100vw, 58vw", true);
+
+  /* ---------- about ---------- */
+  const A = window.ABOUT;
+  if (A) {
+    $("#about-title").textContent = A.title;
+    $("#about-text").innerHTML = A.text.map((t) => `<p>${t}</p>`).join("");
+    $("#about-points").innerHTML = A.points.map((t) => `<li>${t}</li>`).join("");
+    $("#about-photos").innerHTML = A.photos.map((n, i) => `<figure class="ap${i}">${photo(n, altOf(n), i ? "(max-width:760px) 50vw, 22vw" : "(max-width:760px) 100vw, 45vw")}</figure>`).join("");
+  } else $("#about").remove();
 
   /* ---------- products ---------- */
   const tagName = { honey: "عسل", hive: "من الخلية" };
@@ -130,7 +115,21 @@
     .filter(([k]) => S[k]).map(([k, n]) => `<a class="btn ghost sm" href="${S[k]}" target="_blank" rel="noopener">${n}</a>`).join("");
 
   /* ---------- gallery + reels ---------- */
-  $("#gal").innerHTML = G.map((g) => `<figure><img src="${g.src}" alt="${g.alt}" ></figure>`).join("");
+  $("#gal").innerHTML = G.map((g, i) => `<button type="button" class="gi" data-i="${i}" aria-label="تكبير: ${g.alt}">${photo(g.name, g.alt, "(max-width:600px) 50vw, 25vw")}</button>`).join("");
+  {
+    const lb = $("#lb"); let cur = 0;
+    const show = (i) => {
+      cur = (i + G.length) % G.length;
+      $("#lbimg").src = IMG + G[cur].name + ".jpg"; $("#lbimg").alt = G[cur].alt; $("#lbcap").textContent = G[cur].alt;
+    };
+    $("#gal").addEventListener("click", (e) => { const b = e.target.closest(".gi"); if (b) { show(+b.dataset.i); lb.showModal(); } });
+    $("#lbclose").onclick = () => lb.close();
+    $("#lbnext").onclick = () => show(cur + 1);
+    $("#lbprev").onclick = () => show(cur - 1);
+    lb.addEventListener("click", (e) => { if (e.target === lb) lb.close(); });
+    lb.addEventListener("keydown", (e) => { if (e.key === "ArrowLeft") show(cur + 1); if (e.key === "ArrowRight") show(cur - 1); });
+    lb.addEventListener("close", () => { const b = $(`.gi[data-i="${cur}"]`); if (b) b.focus(); });
+  }
   $("#reels-list").innerHTML = R.length
     ? R.map((v) => `<div class="reel"><video src="${v.src}" ${v.poster ? `poster="${v.poster}"` : ""} controls playsinline preload="metadata" title="${v.title || ""}"></video></div>`).join("")
     : `<div class="empty">قريباً: ريلز من داخل المنحل، من الخلية إلى الجرة.${soc ? `<div class="social">${soc}</div>` : ""}</div>`;

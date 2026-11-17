@@ -55,12 +55,41 @@ window.SERVICES = [
   { icon: "chat", name: "المساعدة في الاختيار", text: "أخبرنا بذوقك واستعمالك، ونقترح عليك النوع المناسب." }
 ];
 
-/* الصور: ضع الصور في مجلد images/gallery ثم أضفها هنا
-   مثال: { src: "images/gallery/01.jpg", alt: "خلايا النحل في المنحل" } */
+/* قسم "قصتنا": عدّل النص ليحكي قصة المنحل كما هي */
+window.ABOUT = {
+  title: "من قلب احاحان",
+  text: [
+    "مناحلنا في بلاد احاحان، بين أشجار الأركان والأعشاب البرية. هنا يرعى نحلنا، وهنا نعتني به طوال السنة.",
+    "نعمل في الخلايا الحديثة وفي الخلايا التقليدية، ونجمع العسل وحبوب اللقح وباقي خيرات الخلية بأيدينا، ثم نجهّزها ونوصلها إليك."
+  ],
+  points: ["خلايا بين أشجار الأركان", "خلايا حديثة وتقليدية", "من المنحل إليك مباشرة"],
+  photos: ["apiary", "traditional-hive", "bee-flower"]
+};
+
+/* الصورة الرئيسية في أعلى الصفحة (اسم صورة من مجلد images/gallery) */
+window.HERO_PHOTO = { name: "beekeeper-frame", alt: "نحّال من مناحل احاحان يفحص إطاراً من الخلية بين أشجار الأركان" };
+
+/* الصور: لكل صورة نسختان في مجلد images/gallery:
+   name.jpg (كبيرة، تُفتح عند الضغط) و name-sm.jpg (صغيرة للعرض)
+   جميع الصور ملك لمنتوجات مناحل احاحان، ولا يُسمح بإعادة استعمالها دون إذن */
 window.GALLERY = [
-  { src: "assets/logo-original.jpg", alt: "شعار منتوجات مناحل احاحان" }
+  { name: "apiary", alt: "خلايا المنحل وسط الحقول وأشجار الأركان" },
+  { name: "beekeeper-frame", alt: "نحّال يفحص إطاراً من الخلية" },
+  { name: "pollen", alt: "حبوب اللقح بألوانها الطبيعية" },
+  { name: "traditional-hive", alt: "أقراص الشمع داخل خلية تقليدية" },
+  { name: "bee-flower", alt: "نحلة تجمع حبوب اللقح من زهرة برية" },
+  { name: "frame-bees", alt: "إطار شمع يغطيه النحل" },
+  { name: "pollen-trap", alt: "حبوب اللقح عند مدخل الخلية" },
+  { name: "bees-on-comb", alt: "النحل على أقراص الشمع" },
+  { name: "lifting-frame", alt: "رفع إطار من الخلية" },
+  { name: "capped-frame", alt: "إطار من داخل الخلية" },
+  { name: "comb-pieces", alt: "قطع من أقراص الشهد" },
+  { name: "hive-inspection", alt: "فحص الخلايا في المنحل" },
+  { name: "frame-wildflowers", alt: "إطار من الخلية وسط الأزهار البرية" },
+  { name: "top-bars", alt: "إطارات الخلية من الأعلى" },
+  { name: "hive-products", alt: "من خيرات الخلية" }
 ];
 
 /* الريلز: ضع الفيديوهات في مجلد videos ثم أضفها هنا
-   مثال: { src: "videos/reel-01.mp4", poster: "images/gallery/01.jpg", title: "جني العسل" } */
+   مثال: { src: "videos/reel-01.mp4", poster: "images/gallery/apiary-sm.jpg", title: "جني العسل" } */
 window.REELS = [];

@@ -7,7 +7,7 @@
 <meta name="description" content="منتوجات مناحل احاحان: العسل بجميع أنواعه، حبوب اللقح، الغذاء الملكي، العكبر وشمع النحل. اطلب مباشرة عبر واتساب.">
 <meta property="og:title" content="منتوجات مناحل احاحان · ⵜⴰⴷⴷⴰⵔⵜ ⵏ ⵉⵃⴰⵃⴰⵏ">
 <meta property="og:description" content="العسل بجميع أنواعه وكل مشتقات الخلية.">
-<meta property="og:image" content="https://manahil-ahahan.github.io/assets/logo-original.jpg">
+<meta property="og:image" content="https://manahil-ahahan.github.io/images/gallery/apiary.jpg">
 <meta property="og:url" content="https://manahil-ahahan.github.io/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ar_MA">
@@ -25,6 +25,7 @@
     <a class="brand" href="#top"><img src="assets/logo.svg" alt="" width="42" height="42"><span class="bn">مناحل احاحان<span class="tz" lang="zgh" dir="ltr">ⵜⴰⴷⴷⴰⵔⵜ ⵏ ⵉⵃⴰⵃⴰⵏ</span></span></a>
     <div class="links">
       <a href="#products">المنتوجات</a>
+      <a href="#about">قصتنا</a>
       <a href="#services">الخدمات</a>
       <a href="#gallery">الصور</a>
       <a href="#reels">الريلز</a>
@@ -47,7 +48,7 @@
           <a class="btn ghost" href="#products">تصفّح المنتوجات</a>
         </div>
       </div>
-      <div class="comb" id="comb"></div>
+      <figure class="hero-photo" id="herophoto"></figure>
     </div>
   </section>
   <svg class="drip" viewBox="0 0 1200 46" preserveAspectRatio="none" aria-hidden="true"><path fill="currentColor" d="M0 0h1200v8c-40 0-48 30-70 30s-20-30-60-30H860c-30 0-32 22-48 22s-18-22-50-22H520c-36 0-40 34-62 34s-24-34-60-34H210c-30 0-34 18-50 18s-18-18-48-18H0Z"/></svg>
@@ -69,6 +70,17 @@
     </div>
   </section>
 
+  <section class="band about" id="about">
+    <div class="wrap">
+      <div class="atext">
+        <h2 id="about-title"></h2>
+        <div id="about-text"></div>
+        <ul class="points" id="about-points"></ul>
+      </div>
+      <div class="aphotos" id="about-photos"></div>
+    </div>
+  </section>
+
   <section class="band svc" id="services">
     <div class="wrap">
       <h2>خدماتنا</h2>
@@ -80,7 +92,7 @@
   <section class="band" id="gallery">
     <div class="wrap">
       <h2>من المنحل</h2>
-      <p class="lead">صور من خلايانا ومنتوجاتنا.</p>
+      <p class="lead">صور حقيقية من خلايانا ومنتوجاتنا. اضغط على أي صورة لتكبيرها.</p>
       <div class="gal" id="gal"></div>
     </div>
   </section>
@@ -134,9 +146,17 @@
   <div class="wrap">
     <a class="brand" href="#top"><img src="assets/logo.svg" alt="" width="34" height="34"><span class="bn">مناحل احاحان<span class="tz" lang="zgh" dir="ltr">ⵜⴰⴷⴷⴰⵔⵜ ⵏ ⵉⵃⴰⵃⴰⵏ</span></span></a>
     <div class="social" id="footsoc"></div>
-    <span>© <span id="year"></span> منتوجات مناحل احاحان</span>
+    <span>© <span id="year"></span> منتوجات مناحل احاحان. جميع الحقوق محفوظة.</span>
+    <p class="rights">جميع الصور والمحتوى في هذا الموقع ملك لمنتوجات مناحل احاحان، ولا يجوز نسخها أو إعادة استعمالها دون إذن مكتوب.</p>
   </div>
 </footer>
+
+<dialog class="lb" id="lb" aria-label="عرض الصورة">
+  <figure><img id="lbimg" alt=""><figcaption id="lbcap"></figcaption></figure>
+  <button class="lbx" type="button" id="lbclose" aria-label="إغلاق">✕</button>
+  <button class="lbn prev" type="button" id="lbprev" aria-label="الصورة السابقة">›</button>
+  <button class="lbn next" type="button" id="lbnext" aria-label="الصورة التالية">‹</button>
+</dialog>
 
 <script src="js/data.js"></script>
 <script src="js/main.js"></script>
