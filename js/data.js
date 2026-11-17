@@ -69,7 +69,8 @@ window.ABOUT = {
 /* الصورة الرئيسية في أعلى الصفحة (اسم صورة من مجلد images/gallery) */
 window.HERO_PHOTO = { name: "beekeeper-frame", alt: "نحّال من مناحل احاحان يفحص إطاراً من الخلية بين أشجار الأركان" };
 
-/* الصور: لكل صورة نسختان في مجلد images/gallery:
+/* الصور: جهّز كل صورة جديدة بالأداة tools/prepare-photos.py (انظر README)
+   لكل صورة نسختان في مجلد images/gallery:
    name.jpg (كبيرة، تُفتح عند الضغط) و name-sm.jpg (صغيرة للعرض)
    جميع الصور ملك لمنتوجات مناحل احاحان، ولا يُسمح بإعادة استعمالها دون إذن */
 window.GALLERY = [
@@ -87,7 +88,8 @@ window.GALLERY = [
   { name: "hive-inspection", alt: "فحص الخلايا في المنحل" },
   { name: "frame-wildflowers", alt: "إطار من الخلية وسط الأزهار البرية" },
   { name: "top-bars", alt: "إطارات الخلية من الأعلى" },
-  { name: "hive-products", alt: "من خيرات الخلية" }
+  { name: "propolis", alt: "العكبر (البروبوليس) كما يُجمع من الخلية" },
+  { name: "propolis-2", alt: "قطع العكبر (البروبوليس)" }
 ];
 
 /* الريلز: ضع الفيديوهات في مجلد videos ثم أضفها هنا
