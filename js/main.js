@@ -85,7 +85,7 @@
   const tagName = { honey: "عسل", hive: "من الخلية" };
   const card = (p) => `
       <article class="prod">
-        <div class="pic">${icons[p.icon](p.tone)}</div>
+        <div class="pic${p.photo ? " real" : ""}">${p.photo ? photo(p.photo, p.name, "(max-width:680px) 50vw, 20vw") : icons[p.icon](p.tone)}</div>
         <div class="body">
           <span class="tag">${tagName[p.kind]}</span>
           <h3>${p.name}</h3>

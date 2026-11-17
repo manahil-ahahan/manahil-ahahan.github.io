@@ -17,7 +17,8 @@ window.SITE = {
 
 /* tone: لون العسل في الرسم (0 = فاتح جداً، 1 = داكن جداً)
    kind: "honey" للعسل، "hive" لمشتقات الخلية
-   icon: jar | comb | pollen | jelly | propolis | wax          */
+   icon: jar | comb | pollen | jelly | propolis | wax
+   photo: (اختياري) اسم صورة حقيقية من images/gallery تُعرض بدل الرسم */
 window.PRODUCTS = [
   { kind: "honey", icon: "jar", tone: 0.45, name: "عسل الزعتر",
     text: "من أزهار الزعتر الجبلي. رائحة عطرية واضحة وطعم قوي." },
@@ -35,13 +36,13 @@ window.PRODUCTS = [
     text: "عسل نادر بطعم مائل إلى المرارة." },
   { kind: "honey", icon: "jar", tone: 0.3, name: "عسل الأزهار الجبلية",
     text: "متعدد الأزهار، يجمع نكهات زهور الجبل في موسمها." },
-  { kind: "hive", icon: "comb", tone: 0.4, name: "الشهد",
+  { kind: "hive", icon: "comb", tone: 0.4, photo: "comb-pieces", name: "الشهد",
     text: "العسل داخل أقراص الشمع كما يخرج من الخلية." },
-  { kind: "hive", icon: "pollen", tone: 0.5, name: "حبوب اللقح",
+  { kind: "hive", icon: "pollen", tone: 0.5, photo: "pollen", name: "حبوب اللقح",
     text: "حبيبات طلع الأزهار التي يجمعها النحل، بألوانها الطبيعية." },
   { kind: "hive", icon: "jelly", tone: 0.1, name: "الغذاء الملكي",
     text: "غذاء ملكة النحل، يُحفظ في البرودة." },
-  { kind: "hive", icon: "propolis", tone: 0.9, name: "العكبر (البروبوليس)",
+  { kind: "hive", icon: "propolis", tone: 0.9, photo: "propolis", name: "العكبر (البروبوليس)",
     text: "المادة الراتنجية التي يصنعها النحل لحماية خليته." },
   { kind: "hive", icon: "wax", tone: 0.35, name: "شمع النحل الطبيعي",
     text: "شمع خالص يُستعمل في الصناعات التقليدية والتجميل والشموع." }
