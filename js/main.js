@@ -77,6 +77,7 @@
   if (A) {
     $("#about-title").textContent = A.title;
     $("#about-text").innerHTML = A.text.map((t) => `<p>${t}</p>`).join("");
+    if (A.slogan) { $("#about-slogan").textContent = A.slogan; $("#about-slogan").hidden = false; }
     $("#about-points").innerHTML = A.points.map((t) => `<li>${t}</li>`).join("");
     $("#about-photos").innerHTML = A.photos.map((n, i) => `<figure class="ap${i}">${photo(n, altOf(n), i ? "(max-width:760px) 50vw, 22vw" : "(max-width:760px) 100vw, 45vw")}</figure>`).join("");
   } else $("#about").remove();

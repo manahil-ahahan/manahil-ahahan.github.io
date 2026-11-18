@@ -93,6 +93,7 @@ header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 8
 /* about */
 .about .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(24px,4vw,56px);align-items:center}
 .atext p{margin-top:14px;font-size:18px;max-width:52ch}
+.atext .slogan{margin-top:22px;padding:14px 20px;border-inline-start:5px solid var(--honey);background:var(--honey2);border-radius:0;border-start-end-radius:14px;border-end-end-radius:14px;font:700 clamp(19px,2vw,23px)/1.5 "Alexandria","Tajawal",sans-serif;max-width:none}
 .points{list-style:none;padding:0;margin:22px 0 0;display:grid;gap:10px}
 .points li{display:flex;align-items:center;gap:10px;font-weight:700}
 .points li::before{content:"";flex:none;width:16px;height:18px;background:var(--honey);clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%)}
