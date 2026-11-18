@@ -4,10 +4,10 @@
 
 window.SITE = {
   name: "مناحل احاحان",
-  // رقم واتساب بالصيغة الدولية بدون + أو مسافات. هذا رقم تجريبي: ضع رقمك الحقيقي
-  whatsapp: "212600000000",
-  whatsappDisplay: "+212 6 00 00 00 00",
-  phoneIsSample: true,
+  // رقم واتساب بالصيغة الدولية بدون + أو مسافات
+  whatsapp: "212677491887",
+  whatsappDisplay: "+212 6 77 49 18 87",
+  phoneIsSample: false,
   city: "",            // مثال: "أكادير" (يظهر في قسم التواصل إذا أُضيف)
   instagram: "",       // رابط الحساب كاملاً، مثال: "https://instagram.com/..."
   tiktok: "",
