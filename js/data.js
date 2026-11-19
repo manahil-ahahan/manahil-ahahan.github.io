@@ -34,8 +34,6 @@ window.PRODUCTS = [
     text: "طعم متوازن ورائحة خفيفة، مناسب للاستعمال اليومي." },
   { kind: "honey", icon: "jar", tone: 0.7, name: "عسل الحرمل",
     text: "عسل نادر بطعم مائل إلى المرارة." },
-  { kind: "honey", icon: "jar", tone: 0.3, name: "عسل الأزهار الجبلية",
-    text: "متعدد الأزهار، يجمع نكهات زهور الجبل في موسمها." },
   { kind: "honey", icon: "jar", tone: 0.95, photo: "honey-tasnant", name: "عسل تاسنانت الشوكية",
     text: "عسل داكن اللون من أزهار نبتة تاسنانت الشوكية." },
   { kind: "honey", icon: "jar", tone: 0.88, photo: "honey-argan", name: "عسل أرݣان",
