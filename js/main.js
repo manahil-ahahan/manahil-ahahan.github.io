@@ -112,8 +112,11 @@
   $("#svcs").innerHTML = SV.map((s) => `<div class="s">${svgIcon(s.icon)}<h3>${s.name}</h3><p>${s.text}</p></div>`).join("");
 
   /* ---------- social links ---------- */
+  const socIcons = {
+    facebook: '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.6 1.6-1.6h1.7V4.4c-.3 0-1.3-.1-2.5-.1-2.5 0-4.1 1.5-4.1 4.2v2.3H7.4V14h2.8v8Z"/></svg>'
+  };
   const soc = [["instagram", "إنستغرام"], ["tiktok", "تيك توك"], ["facebook", "فيسبوك"], ["youtube", "يوتيوب"]]
-    .filter(([k]) => S[k]).map(([k, n]) => `<a class="btn ghost sm" href="${S[k]}" target="_blank" rel="noopener">${n}</a>`).join("");
+    .filter(([k]) => S[k]).map(([k, n]) => `<a class="btn ghost sm" href="${S[k]}" target="_blank" rel="noopener">${socIcons[k] || ""}${n}</a>`).join("");
 
   /* ---------- gallery + reels ---------- */
   $("#gal").innerHTML = G.map((g, i) => `<button type="button" class="gi" data-i="${i}" aria-label="تكبير: ${g.alt}">${photo(g.name, g.alt, "(max-width:600px) 50vw, 25vw")}</button>`).join("");
@@ -139,6 +142,7 @@
   /* ---------- contact ---------- */
   document.querySelectorAll(".wanum").forEach((e) => (e.textContent = S.whatsappDisplay));
   document.querySelectorAll(".walink").forEach((a) => (a.href = waLink("السلام عليكم، أريد الاستفسار عن منتوجات مناحل احاحان")));
+  if (S.facebook) { $("#fbrow a").href = S.facebook; $("#fbrow").hidden = false; }
   if (S.city) { $("#city").textContent = S.city; $("#cityrow").hidden = false; }
   if (!S.phoneIsSample) $("#sample").remove();
 

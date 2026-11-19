@@ -159,5 +159,8 @@ textarea{min-height:96px;resize:vertical}
 footer{background:#2a190b;color:#d9c3a3;padding:28px max(5vw,16px);font-size:15px}
 footer .wrap{display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between}
 footer .brand{color:#F6E6CC;font-size:19px}
+footer .btn.ghost{color:#F6E6CC}
+.btn.sm svg{width:18px;height:18px}
+.info a:not(.btn){color:inherit;font-weight:700;text-underline-offset:4px}
 footer .rights{flex-basis:100%;margin:0;font-size:13px;color:#a8916f}
 

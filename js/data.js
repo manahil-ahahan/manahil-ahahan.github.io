@@ -11,7 +11,7 @@ window.SITE = {
   city: "إحاحان، إقليم الصويرة",   // يظهر في قسم التواصل
   instagram: "",       // رابط الحساب كاملاً، مثال: "https://instagram.com/..."
   tiktok: "",
-  facebook: "",
+  facebook: "https://www.facebook.com/profile.php?id=100069611135215",
   youtube: ""
 };
 
