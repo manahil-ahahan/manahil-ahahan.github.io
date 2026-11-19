@@ -44,7 +44,7 @@ window.PRODUCTS = [
     text: "غذاء ملكة النحل، يُحفظ في البرودة." },
   { kind: "hive", icon: "propolis", tone: 0.9, photo: "propolis", name: "العكبر (البروبوليس)",
     text: "المادة الراتنجية التي يصنعها النحل لحماية خليته." },
-  { kind: "hive", icon: "wax", tone: 0.35, name: "شمع النحل الطبيعي",
+  { kind: "hive", icon: "wax", tone: 0.35, photo: "beeswax", name: "شمع النحل الطبيعي",
     text: "شمع خالص يُستعمل في الصناعات التقليدية والتجميل والشموع." }
 ];
 
@@ -88,6 +88,7 @@ window.GALLERY = [
   { name: "lifting-frame", alt: "رفع إطار من الخلية" },
   { name: "capped-frame", alt: "إطار من داخل الخلية" },
   { name: "comb-pieces", alt: "قطع من أقراص الشهد" },
+  { name: "beeswax", alt: "أقراص شمع النحل الطبيعي" },
   { name: "hive-inspection", alt: "فحص الخلايا في المنحل" },
   { name: "frame-wildflowers", alt: "إطار من الخلية وسط الأزهار البرية" },
   { name: "top-bars", alt: "إطارات الخلية من الأعلى" },
