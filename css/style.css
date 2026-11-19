@@ -1,6 +1,6 @@
 /* VOICE   warm, artisanal, trustworthy: a family apiary talking to customers
    IDEA    the honeycomb frame: every section is a hive cell, honey drips between bands
-   PICTURE real photos from the apiary: the beekeeper in the hero, hives among argan trees in the story band
+   PICTURE light cream hero with a faint honeycomb and honey dripping at its edge; real photos from the apiary: the beekeeper in the hero, hives among argan trees in the story band
    COLOUR  honey #F2A900 fields, comb-brown ink #3B2412, olive leaf #5E6B2E accent, white ground
    TYPE    Alexandria (display, close to the logo lettering) + Tajawal (text) + Noto Sans Tifinagh (Amazigh name)
    LAYOUT  laptop: title + CTA beside a wide comb picture; phone: title, picture, buttons stacked */
@@ -53,7 +53,8 @@ header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 8
 .btn:focus-visible,.chip:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
 
 /* hero */
-.hero{background:var(--honey);color:#3B2412;padding-block:clamp(28px,4vw,56px) 0;padding-inline:max(5vw,16px);overflow:hidden}
+/* light cream ground, faint honeycomb, warm honey glow behind the photo */
+.hero{background:radial-gradient(60% 80% at 25% 60%,rgba(242,169,0,.22),transparent 70%),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='97' viewBox='0 0 56 97'%3E%3Cpath d='M28 0l28 16v32L28 64 0 48V16zM28 64v33M0 48l-28 16M56 48l28 16' fill='none' stroke='%23E8A010' stroke-opacity='.16' stroke-width='2'/%3E%3C/svg%3E") 0 0/56px 97px,#FFF7E3;color:#3B2412;padding-block:clamp(28px,4vw,56px) 0;padding-inline:max(5vw,16px);overflow:hidden}
 [hidden]{display:none!important}
 .hero .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(16px,3vw,40px);align-items:end}
 .hero h1{font-size:clamp(34px,4.6vw,60px);line-height:1.15}
@@ -64,7 +65,7 @@ header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 8
 .hero .btn.ghost{color:#3B2412}
 .hero-photo{margin:0 0 clamp(28px,4vw,56px);aspect-ratio:4/3;border-radius:28px;overflow:hidden;border:6px solid #3B2412;box-shadow:0 18px 40px rgba(59,36,18,.28);background:#3B2412}
 .hero-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 42%}
-.drip{display:block;width:100%;height:46px;color:var(--honey)}
+.drip{display:block;width:100%;height:46px;color:#F2B92A}
 @media(max-width:760px){.hero .wrap{grid-template-columns:minmax(0,1fr)}.hero .text{order:0}.hero-photo{order:1;margin-bottom:0}.hero .cta{order:2;margin-top:6px}}
 
 /* products */
