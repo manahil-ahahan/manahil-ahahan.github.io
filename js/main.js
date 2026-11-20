@@ -94,11 +94,13 @@
           <a class="btn wa sm" href="${waLink(`السلام عليكم، أريد طلب: ${p.name}`)}" target="_blank" rel="noopener">${waIcon}اطلب الآن</a>
         </div>
       </article>`;
-  const groups = [["honey", "أنواع العسل", ""], ["hive", "مشتقات الخلية", ""]];
+  const HR = window.HONEY_RANGE_PHOTO;
+  const rangeFig = HR ? `<figure class="range">${photo(HR.name, HR.alt, "(max-width:680px) 100vw, 20vw")}<figcaption>${HR.caption}</figcaption></figure>` : "";
+  const groups = [["honey", "أنواع العسل", HR ? "five" : ""], ["hive", "مشتقات الخلية", ""]];
   const drawProducts = (k) => {
     $("#grid").innerHTML = groups.filter(([g]) => k === "all" || k === g).map(([g, title, cls]) => `
       <div class="group">${k === "all" ? `<h3 class="gh">${title}</h3>` : ""}
-        <div class="grid ${cls}">${P.filter((p) => p.kind === g).map(card).join("")}</div>
+        <div class="grid ${cls}">${g === "honey" ? rangeFig : ""}${P.filter((p) => p.kind === g).map(card).join("")}</div>
       </div>`).join("");
   };
   document.querySelectorAll(".chip").forEach((c) => c.addEventListener("click", () => {

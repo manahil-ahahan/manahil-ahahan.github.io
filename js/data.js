@@ -38,6 +38,10 @@ window.PRODUCTS = [
     text: "شمع خالص يُستعمل في الصناعات التقليدية والتجميل والشموع." }
 ];
 
+/* صورة جامعة تظهر بجانب بطاقات العسل (اختيارية) */
+window.HONEY_RANGE_PHOTO = { name: "honey-range", alt: "جرار أنواع عسل مناحل احاحان الأربعة جنباً إلى جنب",
+  caption: "أنواعنا الأربعة جنباً إلى جنب، ولكل نوع لونه" };
+
 /* الخدمات: عدّلها حسب ما تقدمه فعلاً */
 window.SERVICES = [
   { icon: "cart", name: "البيع بالتقسيط والجملة", text: "من علبة واحدة للبيت إلى كميات للمحلات والتعاونيات." },
@@ -67,6 +71,7 @@ window.HERO_PHOTO = { name: "beekeeper-frame", alt: "نحّال من مناحل 
    name.jpg (كبيرة، تُفتح عند الضغط) و name-sm.jpg (صغيرة للعرض)
    جميع الصور ملك لمنتوجات مناحل احاحان، ولا يُسمح بإعادة استعمالها دون إذن */
 window.GALLERY = [
+  { name: "honey-range", alt: "جرار أنواع عسل مناحل احاحان الأربعة جنباً إلى جنب" },
   { name: "apiary", alt: "خلايا المنحل وسط الحقول وأشجار الأركان" },
   { name: "beekeeper-frame", alt: "نحّال يفحص إطاراً من الخلية" },
   { name: "pollen", alt: "حبوب اللقح بألوانها الطبيعية" },
@@ -92,6 +97,7 @@ window.GALLERY = [
   { name: "propolis-2", alt: "قطع العكبر (البروبوليس)" }
 ];
 
-/* الريلز: ضع الفيديوهات في مجلد videos ثم أضفها هنا
-   مثال: { src: "videos/reel-01.mp4", poster: "images/gallery/apiary-sm.jpg", title: "جني العسل" } */
-window.REELS = [];
+/* الريلز: جهّز كل فيديو بالأداة tools/prepare-video.sh (انظر README) ثم أضفه هنا */
+window.REELS = [
+  { src: "videos/reel-pollen.mp4", poster: "videos/reel-pollen-poster.jpg", title: "حبوب اللقاح: من الزهرة إلى مائدتكم" }
+];
