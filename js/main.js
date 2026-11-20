@@ -94,7 +94,7 @@
           <a class="btn wa sm" href="${waLink(`السلام عليكم، أريد طلب: ${p.name}`)}" target="_blank" rel="noopener">${waIcon}اطلب الآن</a>
         </div>
       </article>`;
-  const groups = [["honey", "أنواع العسل", "five"], ["hive", "مشتقات الخلية", ""]];
+  const groups = [["honey", "أنواع العسل", ""], ["hive", "مشتقات الخلية", ""]];
   const drawProducts = (k) => {
     $("#grid").innerHTML = groups.filter(([g]) => k === "all" || k === g).map(([g, title, cls]) => `
       <div class="group">${k === "all" ? `<h3 class="gh">${title}</h3>` : ""}

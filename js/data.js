@@ -28,8 +28,6 @@ window.PRODUCTS = [
     text: "عسل كهرماني اللون من أزهار الأعشاب البرية المحيطة بمناحلنا." },
   { kind: "honey", icon: "jar", tone: 0.4, photo: "honey-spring", name: "عسل الربيع",
     text: "عسل فاتح اللون من أزهار الربيع، يجمعه النحل في موسم الإزهار." },
-  { kind: "honey", icon: "jar", tone: 0.15, name: "عسل زهر الليمون",
-    text: "فاتح اللون، خفيف ومنعش، برائحة زهر الحمضيات." },
   { kind: "hive", icon: "comb", tone: 0.4, photo: "comb-bowl", name: "الشهد",
     text: "العسل داخل أقراص الشمع كما يخرج من الخلية." },
   { kind: "hive", icon: "pollen", tone: 0.5, photo: "pollen-jar", name: "حبوب اللقح",
